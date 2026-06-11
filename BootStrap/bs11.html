@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css" />
+    <script src="bootstrap-5.0.0-dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <button
+            class="nav-link active"
+            data-bs-toggle="tab"
+            data-bs-target="#home"
+            type="button"
+          >
+            ホーム
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#profile"
+            type="button"
+          >
+            プロフィール
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#contact"
+            type="button"
+          >
+            連絡先
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content border border-top-0 p-3">
+        <div class="tab-pane fade show active" id="home">
+          <h5>ホームの内容</h5>
+          <p>これはホームタブに表示されるコンテンツです。</p>
+        </div>
+        <div class="tab-pane fade" id="profile">
+          <h5>プロフィールの内容</h5>
+          <p>ここにはユーザーのプロフィール情報が表示されます。</p>
+        </div>
+        <div class="tab-pane fade" id="contact">
+          <h5>連絡先の情報</h5>
+          <p>お問い合わせフォームや連絡先詳細をここに配置します。</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

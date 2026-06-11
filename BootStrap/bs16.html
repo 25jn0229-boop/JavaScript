@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap基本サンプル</title>
+    <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css" />
+    <style>
+      .hero-section {
+        background-color: #f8f9fa;
+        padding: 5rem 0;
+      }
+      .card-section {
+        padding: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MyBootstrapサイト</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">ホーム</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">サービス</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ブログ</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <div class="hero-section text-center">
+      <div class="container-fluid">
+        <h1 class="display-4 fw-bold mb-3">Bootstrapで美しいウェブサイトを</h1>
+        <p class="lead mb-4">
+          レスポンシブデザイン対応のコンポーネントを組み合わせて、
+          素早くプロフェッショナルなページを構築できます。
+        </p>
+        <a href="#" class="btn btn-primary btn-lg me-2">今すぐ始める</a>
+        <a href="#" class="btn btn-outline-secondary btn-lg">詳しく見る</a>
+      </div>
+    </div>
+
+    <!-- カードセクション -->
+    <div class="container-fluid card-section">
+      <h2 class="text-center mb-5">私たちの強み</h2>
+      <div class="row text-center">
+        <!-- ✅ row stays open -->
+
+        <!-- カード1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">高速開発</h5>
+              <p class="card-text">
+                豊富なユーティリティクラスで、開発時間を大幅に短縮します。
+              </p>
+              <a href="#" class="btn btn-sm btn-link">詳細</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- カード2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">レスポンシブ対応</h5>
+              <p class="card-text">
+                あらゆるデバイスの画面サイズに自動で最適化されます。
+              </p>
+              <a href="#" class="btn btn-sm btn-link">詳細</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- カード3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">拡張性</h5>
+              <p class="card-text">独自のブランドイメージを表現できます。</p>
+              <a href="#" class="btn btn-sm btn-link">詳細</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="bg-dark text-white text-center py-3 mt-2">
+      <div class="container-fluid">
+        <p class="mb-0">&copy; 2025 MyCompany. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css" />
+    <script src="bootstrap-5.0.0-dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-4 p-4 border rounded">
+      <form>
+        <div class="mb-3">
+          <label for="email1" class="form-label">メールアドレス:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email1"
+            placeholder="name@example.com"
+          />
+          <div class="form-text">
+            メールアドレスが他と共有されることはありません。
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password1" class="form-label">パスワード:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password1"
+            placeholder="パスワードを入力"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="checkbox1" />
+          <label class="form-check-label" for="checkbox1">記憶する</label>
+        </div>
+        <button type="submit" class="btn btn-primary">送信</button>
+      </form>
+    </div>
+  </body>
+</html>
