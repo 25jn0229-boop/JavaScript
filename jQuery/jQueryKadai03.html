@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery入門</title>
+    <!-- jQueryファイルの読み込み -->
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./jquery.validate.min.js"></script>
+  </head>
+  <body>
+    <h1>jQueryを利用したバリデーションチェック(課題3)</h1>
+
+    <form id="myForm">
+      学籍番号：<input type="text" name="sno" /><br />
+      名前：<input type="text" name="sname" /><br />
+      郵便番号：<input type="text" name="szip" /><br />
+      住所：<input type="text" name="saddress" /><br />
+      電話番号：<input type="text" name="stel" /><br />
+      メールアドレス：<input type="text" name="smail" /><br />
+      <input type="submit" value="送信" />
+      <input type="reset" />
+    </form>
+
+    <script>
+      $(function () {
+        $("#myForm").validate({
+          rules: {
+            sno: {
+              required: true,
+              minlength: 8,
+              maxlength: 8,
+              digits: true,
+            },
+            sname: {
+              required: true,
+            },
+            szip: {
+              required: false,
+              digits: true,
+              minlength: 7,
+              maxlength: 7,
+            },
+            saddress: {
+              required: false,
+            },
+            stel: {
+              required: false,
+              digits: true,
+              minlength: 10,
+              maxlength: 11,
+            },
+            smail: {
+              required: true,
+              email: true,
+            },
+          },
+
+          messages: {
+            sno: {
+              required: "学籍番号をいれてください",
+              minlength: "学籍番号は8文字です",
+              maxlength: "学籍番号は8文字です",
+            },
+            sname: {
+              required: "名前を入力してください",
+            },
+            szip: {
+              digits: "数字のみ入力してください",
+              minlength: "郵便番号は7文字です",
+              maxlength: "郵便番号は7文字です",
+            },
+            stel: {
+              digits: "数字のみ入力してください",
+              minlength: "電話番号は10桁か11桁です",
+              maxlength: "電話番号は10桁か11桁です",
+            },
+            smail: {
+              required: "必ず入力してください",
+              email: "正しいメールアドレスを入力してください",
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

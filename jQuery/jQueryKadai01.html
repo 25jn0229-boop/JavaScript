@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 課題1</title>
+    <script src="../../03_jQuery02/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        $("h1").click(function () {
+          if ($("p").css("display") === "block") {
+            $("p").css("display", "none");
+          } else {
+            $("p").css("display", "block");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>角丸のボックスを作ってみよう</h1>
+    <p>
+      タイトル部分のみ角丸の、ボックスを作成しましょう。クリックするとこの部分が変化します。
+    </p>
+  </body>
+</html>

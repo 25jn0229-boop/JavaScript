@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>4-12　実習</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="../jquery-3.6.0.js"></script>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="../jquery.validate.min.js"></script>
+  </head>
+
+  <body id="blog">
+    <div id="container">
+      <header>
+        <h1>花と空の風景のブログ</h1>
+        <p>管理人の趣味で撮った「花」の写真をアップしているサイトです。</p>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="photo.html">Photo</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <h2>Contact</h2>
+        <p>何かありましたら、こちらのフォームをお使いください。</p>
+
+        <form id="form1">
+          <p>氏名</p>
+          <input type="text" name="name1" />
+
+          <p>メール</p>
+          <input type="text" name="mail" size="20" />
+
+          <p>
+            性別
+            <input type="radio" name="sex" value="男性" />男性
+            <input type="radio" name="sex" value="女性" />女性
+          </p>
+
+          <p>本ブログについてお気に入りの内容があればチェックして下さい。</p>
+          <p>
+            <input type="checkbox" name="favorite1" value="10" />写真
+            <input type="checkbox" name="favorite1" value="20" />花
+            <input type="checkbox" name="favorite1" value="30" />その他
+          </p>
+
+          <p>メッセージ内容</p>
+          <textarea name="message" cols="60" rows="4"></textarea>
+
+          <p><input type="submit" value="送信" /></p>
+        </form>
+
+        <script>
+          //ここからなおしました
+          $(function () {
+            $("#form1").validate({
+              rules: {
+                name1: {
+                  required: true,
+                },
+
+                mail: {
+                  required: true,
+                  email: true,
+                },
+
+                message: {
+                  required: true,
+                },
+              },
+
+              messages: {
+                name1: {
+                  required: "必ず入力してください",
+                },
+
+                mail: {
+                  required: "必ず入力してください",
+                  email: "正しいメールアドレスを入力してください",
+                },
+
+                message: {
+                  required: "メッセージを入力してください",
+                },
+              },
+            });
+          });
+        </script>
+
+        <aside></aside>
+      </article>
+
+      <footer>
+        <p><small>Copyright(C)2015Free Cloud All Rights Reserved.</small></p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery入門</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="jquerykadai02.css" />
+  </head>
+  <body>
+    <dl>
+      <dt>風景</dt>
+      <dd><img src="./jquerykadai02img.jpg" /></dd>
+    </dl>
+
+    <script>
+      $(function () {
+        $("dt").click(function () {
+          $("dd").slideToggle("slow");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>4-12　実習</title>
+    <link rel="stylesheet" href="style.css" />
+   <!-- CSS, jQuery, JavaScriptファイルの読み込み -->
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="../modalwin.js"></script>
+    <link href="../modalwin.css" rel="stylesheet" />
+
+
+</head>
+
+<body id="blog">
+    <div id="container">
+        <header>
+            <h1>花と空の風景のブログ</h1>
+            <p>管理人の趣味で撮った「花」の写真をアップしているサイトです。</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="photo.html">Photo</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h2>沖縄写真集</h2>
+            <figure>
+                <ul id="modalwin">
+                    <li><a href="images/s1.jpg" class="modal"><img src="images/s1_thum.jpg" alt="シャンデリア"></a>
+                    </li>
+                    <li><a href="images/s2.jpg" class="modal"><img src="images/s2_thum.jpg" alt="バラ"></a></li>
+                    <li><a href="images/s3.jpg" class="modal"><img src="images/s3_thum.jpg" alt="海"></a></li>
+                    <li><a href="images/s4.jpg" class="modal"><img src="images/s4_thum.jpg" alt="門"></a></li>
+                     <li><a href="images/s5.jpg" class="modal"><img src="images/s5_thum.jpg" alt="門"></a></li>
+                      <li><a href="images/s6.jpg" class="modal"><img src="images/s6_thum.jpg" alt="門"></a></li>
+                       <li><a href="images/s7.jpg" class="modal"><img src="images/s7_thum.jpg" alt="門"></a></li>
+                        <li><a href="images/s8.jpg" class="modal"><img src="images/s8_thum.jpg" alt="門"></a></li>
+                        
+                <div id="glayLayer"></div>
+                <div id="overLayer"></div>
+            </figure>
+            <aside>
+            </aside>
+        </article>
+
+        <footer>
+            <p><small>Copyright(C)2015Free Cloud All Rights Reserved.</small></p>
+        </footer>
+    </div>
+</body>
+
+</html>
