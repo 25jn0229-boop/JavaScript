@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./apexcharts.min.js"></script>
+    <link rel="stylesheet" href="./apexcharts.css" />
+    <style>
+      #chart {
+        max-width: 650px;
+        margin: 35px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chart"></div>
+    <script>
+      let options = {
+        chart: {
+          type: "bar",
+        },
+        series: [
+          {
+            name: "売上高（単位：百万円）",
+            data: [40, 35, 50, 49, 60, 70, 91, 125],
+          },
+        ],
+        xaxis: {
+          categories: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+        },
+      };
+
+      let chart = new ApexCharts(document.querySelector("#chart"), options);
+
+      chart.render();
+    </script>
+  </body>
+</html>
