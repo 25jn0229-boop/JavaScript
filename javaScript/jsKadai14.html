@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="id1"></h1>
+
+    <script>
+      let graduation = new Date(2027, 2, 13, 10);
+
+      function countdown() {
+        let now = new Date();
+        let diff = (graduation - now) / 1000;
+
+        let days = Math.floor(diff / 86400);
+        let hours = Math.floor((diff % 86400) / 3600);
+        let minutes = Math.floor((diff % 3600) / 60);
+        let seconds = Math.floor(diff % 60);
+
+        document.getElementById("id1").innerHTML =
+          `卒業式まであと${days}日${hours}時間${minutes}分${seconds}秒`;
+      }
+      setInterval(countdown, 1000);
+      countdown();
+    </script>
+  </body>
+</html>

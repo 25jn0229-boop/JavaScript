@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+
+      <body>
+        <h1 id="id1">CSS3による回転アニメーション</h1>
+
+        <button onclick="startX()">X軸に回転</button>
+        <button onclick="stopRotation()">X軸回転をストップ</button>
+
+        <button onclick="startY()">Y軸に回転</button>
+        <button onclick="stopRotation()">Y軸回転をストップ</button>
+
+        <button onclick="startZ()">Z軸に回転</button>
+        <button onclick="stopRotation()">Z軸回転をストップ</button>
+
+        <script>
+          let d = 0;
+          let rotationID = null;
+
+          function rotationX() {
+            d += 6;
+            d = d % 360;
+
+            document.getElementById("id1").style.transform = `rotateX(${d}deg)`;
+          }
+
+          function rotationY() {
+            d += 6;
+            d = d % 360;
+
+            document.getElementById("id1").style.transform = `rotateY(${d}deg)`;
+          }
+
+          function rotationZ() {
+            d += 6;
+            d = d % 360;
+
+            document.getElementById("id1").style.transform = `rotateZ(${d}deg)`;
+          }
+
+          function startX() {
+            stopRotation();
+
+            rotationID = setInterval(rotationX, 25);
+          }
+
+          function startY() {
+            stopRotation();
+
+            rotationID = setInterval(rotationY, 25);
+          }
+
+          function startZ() {
+            stopRotation();
+
+            rotationID = setInterval(rotationZ, 25);
+          }
+
+          function stopRotation() {
+            clearInterval(rotationID);
+            rotationID = null;
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

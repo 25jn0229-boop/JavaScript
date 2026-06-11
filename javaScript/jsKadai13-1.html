@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="id1">CSS3による回転アニメーション</h1>
+    <button onclick="startRotation()">回転</button>
+    <button onclick="stopRotation()">ストップ</button>
+
+    <script>
+      let d = 0;
+      let rotationID = null;
+
+      function rotationChar() {
+        d += 6;
+        d = d % 360;
+        document.getElementById("id1").style.transform = `rotateX(${d}deg)`;
+      }
+
+      function startRotation() {
+        if (rotationID === null) {
+          rotationID = setInterval(rotationChar, 25);
+        }
+      }
+
+      function stopRotation() {
+        clearInterval(rotationID);
+        rotationID = null;
+      }
+    </script>
+  </body>
+</html>

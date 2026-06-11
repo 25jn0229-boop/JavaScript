@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="msg"></h1>
+    <script>
+      let width = window.innerWidth;
+      let message = "";
+      if (width <= 960) {
+        message =
+          "スマートフォンまたはタブレットで閲覧している可能性があります。";
+      } else {
+        message = "PCで閲覧しています。";
+      }
+      document.getElementById("msg").innerHTML = message;
+    </script>
+  </body>
+</html>

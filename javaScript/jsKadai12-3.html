@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="id1"></h1>
+
+    <button onclick="start()">スタート</button>
+    <button onclick="stop()">ストップ</button>
+    <button onclick="red()">赤色に変更</button>
+    <button onclick="blue()">青色に変更</button>
+    <button onclick="randomColor()">色をランダムに変更</button>
+
+    <!-- 追加 -->
+    <button onclick="stopColor()">色の変更をストップ</button>
+
+    <button onclick="black()">黒色に変更</button>
+
+    <script>
+      let starttime = null;
+      let timerID = null;
+
+      // 追加
+      let colorID = null;
+
+      function start() {
+        if (timerID === null) {
+          starttime = new Date();
+          timerID = setInterval(dispTime, 10);
+        }
+      }
+
+      function stop() {
+        clearInterval(timerID);
+        timerID = null;
+      }
+
+      function dispTime() {
+        let nowtime = new Date();
+
+        seconds = (nowtime - starttime) / 1000;
+
+        document.getElementById("id1").innerHTML =
+          `ページを開いてから：${seconds.toFixed(2)}秒経過`;
+      }
+
+      function red() {
+        stopColor();
+
+        let sentence = document.getElementById("id1");
+        sentence.style.color = "red";
+      }
+
+      function blue() {
+        stopColor();
+
+        let sentence = document.getElementById("id1");
+        sentence.style.color = "blue";
+      }
+
+      function black() {
+        stopColor();
+
+        let sentence = document.getElementById("id1");
+        sentence.style.color = "black";
+      }
+
+      function randomColor() {
+        if (colorID === null) {
+          colorID = setInterval(function () {
+            let randomC =
+              "#" + Math.floor(Math.random() * 0xffffff).toString(16);
+
+            let sentence = document.getElementById("id1");
+
+            sentence.style.color = randomC;
+          }, 1000);
+        }
+      }
+
+      // 追加
+      function stopColor() {
+        clearInterval(colorID);
+        colorID = null;
+      }
+    </script>
+  </body>
+</html>

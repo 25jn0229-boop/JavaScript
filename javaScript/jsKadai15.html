@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="msg"></h1>
+    <script>
+      let ua = navigator.userAgent.toLowerCase();
+      let message = "";
+      if (ua.indexOf("firefox") !== -1) {
+        message = "FireFoxで閲覧しています";
+      } else if (ua.indexOf("chrome") !== -1) {
+        message = "Chromeで閲覧しています";
+      } else {
+        message = "FireFox、またはChromeを使用してください";
+      }
+      document.getElementById("msg").innerHTML = message;
+    </script>
+  </body>
+</html>
