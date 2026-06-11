@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#modalwin{
+    width:800px;
+}
+#modalwin li{
+    float:left;
+    list-style-type:none;
+}
+#modalwin li img{
+    border:0;
+    margin:10px;
+}
+#modalwin a {
+    display:block;          /* ブロックボックスにし、幅を指定できるようにする */
+    width:160px;
+    text-align:center;
+    text-decoration:none;
+    border-radius:10px;     /* 背景や角丸を「li」に対して行うと表示結果が違う */
+    background:#dcdcdc;
+    margin:5px;
+    padding:5px;
+}
+#glayLayer{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background:black;
+    opacity: 0.60;
+}
+#overLayer{
+    display:none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-top:-244px;
+    margin-left:-325px;
+}

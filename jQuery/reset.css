@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+	font-family:"メイリオ","ＭＳ Ｐゴシック",sans-serif;
+}
+body {
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+}
+img {
+    border: 0;
+}
