@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="time">現在時刻：</p>
+    <button onclick="getTimeNow()">時刻を取得</button>
+
+    <script>
+      function getTimeNow() {
+        let nowTime = new Date().toLocaleString();
+        document.getElementById("time").innerHTML = `現在時刻：${nowTime}`;
+      }
+    </script>
+  </body>
+</html>

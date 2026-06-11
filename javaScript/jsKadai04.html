@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let jpy = window.prompt("日本円に相当する金額を入力してください。", "");
+      let usd = Math.floor(jpy / 110);
+
+      document.write(`${jpy}円は約${usd}ドルです`);
+    </script>
+  </body>
+</html>

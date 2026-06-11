@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScriptにおけるDOMの扱い方</h1>
+    <p>DOMによって、「id1」のidがついたpタグの中身を変更します。</p>
+    <p id="id1">我が輩は猫である</p>
+    <button onclick="dog()">犬に変更</button>
+    <button onclick="cat()">猫に戻す</button>
+    <script>
+      function dog() {
+        document.getElementById("id1").innerHTML = "我が輩は犬である";
+      }
+      function cat() {
+        document.getElementById("id1").innerHTML = "我が輩は猫である";
+      }
+    </script>
+  </body>
+</html>

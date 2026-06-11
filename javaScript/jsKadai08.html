@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = window.prompt(
+        "10進数→2進数変換：0から255までの値を入力してください。",
+      );
+
+      document.write(
+        `10進数${num}を2進数変換した結果は「${parseInt(num, 10).toString(2)}」です`,
+      );
+    </script>
+  </body>
+</html>

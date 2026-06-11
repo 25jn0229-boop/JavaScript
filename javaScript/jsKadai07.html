@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = window.prompt("1~100の間で数値を入力してください");
+
+      if (num > 100) {
+        document.write("100より大きい値が入力されました");
+      } else if (num > 0) {
+        for (i = 1; i <= num; i++) {
+          document.write(`<p>${i}</p>`);
+        }
+      } else {
+        document.write("不正な値が入力されました");
+      }
+    </script>
+  </body>
+</html>
